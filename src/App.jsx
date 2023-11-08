@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import MovieCard from "./MovieCard"
-import { data } from "autoprefixer"
+import Footer from "./Footer"
 
 export default function App(){
   const [movies, setMovies] = useState([])
@@ -13,11 +13,12 @@ export default function App(){
 
   return(
     <div className="bg-[url('/public/theatre.jpg')] bg-fixed bg-center bg-cover" >
-     <div className="grid grid-cols-4 justify-center gap-4 ml-4">
+     <div className="grid grid-cols-4 justify-center gap-4 m-4">
         {movies.map((movie)=>
         <MovieCard
         key={movie.id}
         {...movie} />)}
+        <Footer />
      </div>
     </div>
   )
