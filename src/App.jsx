@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import MovieCard from "./MovieCard"
 import Footer from "./Footer"
+import NavBar from "./NavBar"
+
 
 export default function App(){
   const [movies, setMovies] = useState([])
@@ -12,14 +14,15 @@ export default function App(){
   },[])
 
   return(
-    <div className="bg-[url('/public/theatre.jpg')] bg-fixed bg-center bg-cover" >
+    <div className="bg-[url('/theatre.jpg')] bg-fixed bg-center bg-cover" >
+      <NavBar />
      <div className="grid grid-cols-4 justify-center gap-4 m-4">
         {movies.map((movie)=>
         <MovieCard
         key={movie.id}
         {...movie} />)}
-        <Footer />
      </div>
+     <Footer />
     </div>
   )
 }
