@@ -12,11 +12,13 @@ export default function App(){
   },[])
 
   return(
-    <div>
-      {movies.map((movie)=>
-      <MovieCard
-       key={movie.id}
-       {...movie} />)}
+    <div className="bg-[url('/public/theatre.jpg')] bg-fixed bg-center bg-cover" >
+     <div className="grid grid-cols-4 justify-center gap-4 ml-4">
+        {movies.map((movie)=>
+        <MovieCard
+        key={movie.id}
+        {...movie} />)}
+     </div>
     </div>
   )
 }
