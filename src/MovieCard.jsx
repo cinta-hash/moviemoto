@@ -7,9 +7,9 @@ export default function MovieCard({title, poster_path, overview, release_date, v
         setShow(prevSate=> !prevSate)
     }
     return(
-        <div class="mt-12 first:mt-0">
-            <div className="bg-gray-300 bg-opacity-10 backdrop-blur-md text-white rounded-sm indent-2">
-            <h1 className="uppercase text-xl p-2 font-bold">{title}</h1>           
+        <div class="pt-16">
+            <div className="bg-gray-300 bg-opacity-10 backdrop-blur-md text-white rounded-sm indent-2 mt-12 first:mt-0">
+            <h1 className="uppercase text-2xl p-2 font-bold">{title}</h1>           
             <img src={IMG_URL+poster_path} alt={title} />
             <p>Released: {release_date}</p>
             <p className="truncate ... ">Overview: {overview}</p>
