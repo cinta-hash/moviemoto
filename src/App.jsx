@@ -14,15 +14,18 @@ export default function App(){
   },[])
 
   return(
+    <>
+    <NavBar />
     <div className="bg-[url('/theatre.jpg')] bg-fixed bg-center bg-cover" >
-      <NavBar />
-     <div className="grid grid-cols-4 justify-center gap-4 m-4">
-        {movies.map((movie)=>
-        <MovieCard
-        key={movie.id}
-        {...movie} />)}
-     </div>
-     <Footer />
+      <div className="grid grid-cols-4 justify-center gap-4 m-4">
+          {movies.map((movie)=>
+          <MovieCard
+          key={movie.id}
+          {...movie} />)}
+      </div>
     </div>
+    <Footer />
+    </>
+   
   )
 }
