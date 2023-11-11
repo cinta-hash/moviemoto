@@ -5,6 +5,9 @@ export default {
   theme: {
     extend: {
       margin: ['first'],
+      fontFamily: {
+        'raleway': ['Raleway', 'sans-serif'],
+    },
     },
   },
   plugins: [],
