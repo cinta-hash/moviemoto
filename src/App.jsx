@@ -33,21 +33,21 @@ export default function App() {
       {page === "home" && (
         <div>
           <header className="w-full fixed left-0 top-0 mb-10 bg-white text-white p-4 bg-opacity-10 backdrop-blur-md">
-            <nav className="flex justify-between items-center space-x-4">
-              <img src="/back.jpg" alt="logo" className="w-16 rounded-full" />
-              <h1 className="font-bold text-6xl">MovieMoto 🎥</h1>
+            <nav className="flex justify-between items-center md:space-x-4">
+              <img src="/back.jpg" alt="logo" className="md:w-16 w-6 rounded-full hidden md:block" />
+              <h1 className="font-bold md:text-6xl text-3xl">MovieMoto<span className="hidden md:block">🎥</span></h1>
               <div className="flex p-4 text-center">
                 <form action="" onSubmit={searchMovie}>
                   <input
                     type="search"
                     placeholder="search"
                     id="search"
-                    className="indent-2 ml-2 rounded-lg p-2 text-gray-600 mr-4"
+                    className="indent-2 ml-2 rounded-lg p-2 text-gray-600 md:mr-4"
                     name="query"
                     value={query}
                     onChange={changeHandler}
                   />
-                  <button type="submit" className="text-3xl hover:text-red-500 ease-in duration-300">
+                  <button type="submit" className="md:text-3xl text-lg hover:text-red-500 ease-in duration-300 hidden md:block">
                     <i className="fa-solid fa-magnifying-glass"></i>
                   </button>
                 </form>
@@ -55,7 +55,7 @@ export default function App() {
             </nav>
           </header>
           <div className="bg-[url('/theatre.jpg')] bg-fixed bg-center bg-cover font-raleway">
-            <div className="grid grid-cols-4 justify-center gap-4 m-4">
+            <div className="md:grid md:grid-cols-4 justify-center md:gap-4 m-4">
               {movies.map((movie) => (
                 <MovieCard key={movie.id} {...movie} />
               ))}
@@ -68,10 +68,10 @@ export default function App() {
       {page === "results" && (
         <div className="bg-[url('/theatre.jpg')] bg-fixed bg-center bg-cover font-raleway">
            <button
-           className="bg-white hover:text-white rounded-md hover:bg-red-700 duration-300 m-8 p-4" 
+           className="bg-white hover:text-white rounded-md hover:bg-red-700 duration-300 md:m-8 md:p-4 p-1 m-2" 
           onClick={() => setPage("home")}>Go Back</button>
           <h1>Search Results</h1>
-          <div className="grid grid-cols-4 justify-center gap-4 m-4">
+          <div className="md:grid md:grid-cols-4 justify-center md:gap-4 m-4">
             {movies.map((movie) => (
               <MovieCard key={movie.id} {...movie} />
             ))}
