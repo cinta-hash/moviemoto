@@ -5,6 +5,7 @@ export default {
   theme: {
     extend: {
       margin: ['first'],
+      opacity: ['group-hover'],
       fontFamily: {
         'raleway': ['Raleway', 'sans-serif'],
     },

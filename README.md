@@ -10,4 +10,4 @@ Currently, two official plugins are available:
 movie site: https://moviemoto.netlify.app/
 API-URL=>'https://api.themoviedb.org/3/movie/popular?api_key=74a80ecc735c5962e96d541c6020b4a4'
 API-IMAGES: "https://image.tmdb.org/t/p/w500/"
-API-SEARCH: 'https://api.themoviedb.org/3/search/movie?api_key=74a80ecc735c5962e96d541c6020b4a4'
+API-SEARCH: 'https://api.themoviedb.org/3/search/movie?api_key=74a80ecc735c5962e96d541c6020b4a4&query='
